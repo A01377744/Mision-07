@@ -5,12 +5,19 @@
 # Es una función que recibe los datos de una división, la calcula y la imprime.
 def dividir(dividendo, divisor):
     cociente = 0
-    dividendoOriginal = dividendo
-    while dividendo >= divisor:
-        dividendo = dividendo - divisor
-        cociente = cociente + 1
-    print('%d / %d = %d, sobra %d' % (dividendoOriginal, divisor, cociente, dividendo))
-    print('')
+    if divisor == 0:
+        print('math error')
+        print('')
+    elif dividendo <= 0 or divisor <= 0:
+        print('Ingrese solamente números positivos')
+        print('')
+    else:
+        dividendoOriginal = dividendo
+        while dividendo >= divisor:
+            dividendo = dividendo - divisor
+            cociente = cociente + 1
+        print('%d / %d = %d, sobra %d' % (dividendoOriginal, divisor, cociente, dividendo))
+        print('')
 
 
 # Es una función que recibe valores hasta que se introduce el -1 y regresa el mayor número introducido.
